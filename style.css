@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    background-image: url("https://www.fluentify.com/home/wp-content/uploads/2020/01/fluentify-cover-privati-scaled.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+header #layover {
+    background: linear-gradient(270deg, transparent 0%, #001A4F 100%);
+}
+
+/* --- Inizio nav --- */
+nav {
+    padding: 20px 0;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 13px;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    height: 42px;
+    line-height: 42px;
+    margin: 0 10px;
+    text-transform: uppercase;
+}
+
+nav a:hover {
+    color: #b3b6ba;
+}
+
+nav .button {
+    padding: 0 20px;
+    border-radius: 5px;
+}
+
+.nav-menu, .nav-buttons {
+    float: left;
+}
+
+nav > .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.nav-menu {
+    width: 68%;
+}
+
+.nav-menu .logo {
+    float: left;
+    margin-right: 25px;
+}
+
+.nav-menu .logo img {
+    height: 42px;
+}
+
+.nav-menu > ul {
+    float: left;
+    list-style-type: none;
+}
+
+.nav-menu > ul > li {
+    float: left;
+    padding-top: 5px;
+}
+
+.nav-menu > ul > li > a {
+    padding: 0 5px;
+}
+
+.nav-buttons {
+    width: 32%;
+    padding-top: 5px;
+}
+
+.button#login {
+    border: 1px solid white;
+}
+
+.button#login i {
+    font-size: 18px;
+}
+
+.button#login:hover {
+    background-color: white;
+    color: #012879;
+}
+
+.button#demo {
+    background-color: #64DE82;
+    color: #337142;
+}
+
+.button#demo:hover {
+    background-color: rgba(100,222,130,0.7);
+    color: white;
+}
+/* --- Fine nav --- */
+
+/* --- Inizio jumbotron --- */
+#jumbotron {
+    height: 400px;
+}
+/* --- Fine jumbotron --- */
