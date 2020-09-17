@@ -13,7 +13,7 @@ a {
     margin: auto;
 }
 
-nav .container, footer .container {
+nav .container, footer .container, main .container:first-of-type {
     width: 82%;
     margin: auto;
 }
@@ -57,6 +57,21 @@ header a {
 
 header #layover {
     background: linear-gradient(270deg, transparent 0%, #001A4F 100%);
+    position: relative;
+}
+
+header #layover img.left.wire {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50%;
+}
+
+header #layover img.right.wire {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
 }
 
 /* --- Inizio nav --- */
@@ -164,6 +179,19 @@ nav > .container::after {
 /* --- Inizio main --- */
 main {
     padding: 100px 0 80px 0;
+    position: relative;
+}
+
+main img.wire {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10%;
+}
+
+main .container:first-of-type {
+    padding-right: calc((82% - 65%) / 2);
 }
 
 #main-image, #main-text {
@@ -191,7 +219,7 @@ main h2, #mobile h2, #call-to-action h2 {
 
 #main-image > img {
     width: 100%;
-    padding: 123px 0;
+    padding: 90px 0;
     display: block;
 }
 
@@ -254,6 +282,26 @@ main p, #mobile p, #security p, #call-to-action p {
     margin-bottom: 20px;
 }
 /* --- Fine main --- */
+
+#pre-footer {
+    position: relative;
+}
+
+#pre-footer img.left.wire {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18%;
+}
+
+#pre-footer img.right.wire {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12%;
+}
 
 /* --- Inizio sezione mobile --- */
 #mobile {
