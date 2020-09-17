@@ -23,6 +23,13 @@ nav .container {
     color: #337142;
     padding: 0 20px;
     border-radius: 5px;
+    display: inline-block;
+    height: 42px;
+    text-transform: uppercase;
+    line-height: 42px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 500;
+    font-size: 13px;
 }
 
 .button:hover {
@@ -174,7 +181,7 @@ main h2 {
     color: rgba(0, 0, 0, 0.6);
 }
 
-main h2, #mobile h2 {
+main h2, #mobile h2, #call-to-action h2 {
     margin-bottom: 50px;
     font-family: 'Poppins', sans-serif;
     font-size: 40px;
@@ -184,6 +191,8 @@ main h2, #mobile h2 {
 
 #main-image > img {
     width: 100%;
+    padding: 123px 0;
+    display: block;
 }
 
 #main-text > h2 > span {
@@ -205,14 +214,14 @@ main h3, #security h3 {
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
     font-size: 27px;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
 main p, #security p {
     color: #727272;
 }
 
-main p, #mobile p, #security p {
+main p, #mobile p, #security p, #call-to-action p {
     padding-bottom: 20px;
     font-family: 'Maven Pro', sans-serif;
     font-weight: 400;
@@ -240,6 +249,10 @@ main p, #mobile p, #security p {
 #main-footer > .box:last-child {
     margin: 0;
 }
+
+#main-footer .box img {
+    margin-bottom: 20px;
+}
 /* --- Fine main --- */
 
 /* --- Inizio sezione mobile --- */
@@ -254,7 +267,7 @@ main p, #mobile p, #security p {
 
 #mobile-text {
     width: 48%;
-    padding-top: 60px;
+    padding: 45px 0;
 }
 
 #mobile-image {
@@ -284,7 +297,9 @@ main p, #mobile p, #security p {
 }
 
 #mobile-image img {
-    width: 70%;
+    width: 60%;
+    display: block;
+    margin: auto;
 }
 /* --- Fine sezione mobile --- */
 
@@ -305,6 +320,29 @@ main p, #mobile p, #security p {
 }
 
 #security-text {
-    padding-top: 100px;
+    padding: 100px 0;
 }
 /* --- Fine sezione security --- */
+
+/* --- Inizio sezione call-to-action --- */
+#call-to-action {
+    color: white;
+    background-color: #294681;
+    padding: 55px 0;
+}
+
+#call-to-action .title, #call-to-action .content {
+    float: left;
+    width: 50%;
+}
+
+#call-to-action::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#call-to-action h2 {
+    margin: 0;
+}
+/* --- Fine sezione call-to-action --- */
