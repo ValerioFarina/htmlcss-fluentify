@@ -13,7 +13,7 @@ a {
     margin: auto;
 }
 
-nav .container {
+nav .container, footer .container {
     width: 82%;
     margin: auto;
 }
@@ -336,7 +336,7 @@ main p, #mobile p, #security p, #call-to-action p {
     width: 50%;
 }
 
-#call-to-action::after {
+#call-to-action .container::after {
     content: "";
     display: table;
     clear: both;
@@ -346,3 +346,131 @@ main p, #mobile p, #security p, #call-to-action p {
     margin: 0;
 }
 /* --- Fine sezione call-to-action --- */
+
+/* --- Inizio footer --- */
+footer {
+    padding: 55px 0;
+    background-color: #001A4F;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    color: white;
+    line-height: 22px;
+}
+
+footer #contacts, footer #links {
+    float: left;
+}
+
+footer .container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer  #contacts {
+    width: 18%;
+    padding-right: 65px;
+}
+
+footer  #links {
+    width: 82%;
+}
+
+footer #contacts .logo img {
+    height: 42px;
+    margin-bottom: 40px;
+}
+
+footer #contacts .logo a:hover {
+    opacity: 0.7;
+}
+
+footer #contacts a#email {
+    color: white;
+    display: block;
+    margin: 20px 0;
+}
+
+footer #contacts a#email:hover {
+    color: #64DE82;
+}
+
+footer #contacts .icons i {
+    margin-right: 10px;
+}
+
+footer #contacts .icons a {
+    color: #64DE82;
+}
+
+footer #contacts .icons a:hover {
+    opacity: 0.6;
+}
+
+footer .menu {
+    padding-bottom: 80px;
+    border-bottom: 1px solid white;
+    margin-bottom: 40px;
+}
+
+footer .menu .item {
+    float: left;
+    margin-right: 25px;
+    width: calc((100% - 125px) / 6);
+}
+
+footer .menu .item:last-child {
+    margin-right: 0;
+}
+
+footer .menu::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer .menu ul {
+    list-style-type: none;
+}
+
+footer .menu ul li {
+    line-height: 22px;
+    margin: 10px 0;
+}
+
+footer .menu a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .menu a:hover {
+    color: #64DE82;
+}
+
+footer .menu h5 {
+    margin-bottom: 20px;
+}
+
+footer .menu h5:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+footer .info li {
+    display: inline-block;
+}
+
+footer .info a {
+    color: white;
+    margin-right: 30px;
+}
+
+footer .info a:hover {
+    color: #64DE82;
+}
+
+footer .menu h5 {
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+/* --- Fine footer --- */
