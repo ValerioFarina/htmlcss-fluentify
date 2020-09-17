@@ -4,6 +4,31 @@
     box-sizing: border-box;
 }
 
+h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+h2 {
+    margin-bottom: 50px;
+    font-size: 40px;
+    line-height: 48px;
+}
+
+h3 {
+    margin-bottom: 20px;
+    font-size: 27px;
+    color: #001A4F;
+}
+
+p {
+    padding-bottom: 20px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+}
+
 a {
     text-decoration: none;
 }
@@ -18,21 +43,21 @@ nav .container, footer .container, main .container:first-of-type {
     margin: auto;
 }
 
-.button {
-    background-color: #64DE82;
-    color: #337142;
-    padding: 0 20px;
-    border-radius: 5px;
+a.button {
     display: inline-block;
     height: 42px;
-    text-transform: uppercase;
     line-height: 42px;
+    padding: 0 20px;
+    border-radius: 5px;
     font-family: 'Maven Pro', sans-serif;
-    font-weight: 500;
     font-size: 13px;
+    font-weight: 500;
+    background-color: #64DE82;
+    color: #337142;
+    text-transform: uppercase;
 }
 
-.button:hover {
+a.button:hover {
     background-color: rgba(100,222,130,0.7);
     color: white;
 }
@@ -48,26 +73,26 @@ header {
 
 header a {
     display: inline-block;
-    color: white;
     height: 42px;
     line-height: 42px;
     margin: 0 10px;
+    color: white;
     text-transform: uppercase;
 }
 
 header #layover {
-    background: linear-gradient(270deg, transparent 0%, #001A4F 100%);
     position: relative;
+    background: linear-gradient(270deg, transparent 0%, #001A4F 100%);
 }
 
-header #layover img.left.wire {
+header img.left.wire {
     position: absolute;
     top: 0;
     left: 0;
     height: 50%;
 }
 
-header #layover img.right.wire {
+header img.right.wire {
     position: absolute;
     top: 0;
     right: 0;
@@ -84,18 +109,18 @@ nav a:hover {
     color: #ffffff94;
 }
 
-.nav-menu, .nav-buttons {
+.nav-menu{
     float: left;
 }
 
-nav > .container::after {
+.nav-buttons {
+    float: right;
+}
+
+nav .container::after {
     content: "";
     display: table;
     clear: both;
-}
-
-.nav-menu {
-    width: 68%;
 }
 
 .nav-menu .logo {
@@ -118,11 +143,25 @@ nav > .container::after {
 }
 
 .nav-menu > ul > li > a {
+    position: relative;
+    z-index: 1;
     padding: 0 5px;
 }
 
+.nav-menu > ul > li.current-item > a::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 20%;
+    left: -12%;
+    z-index: -1;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #64DE82;
+}
+
 .nav-buttons {
-    width: 32%;
     padding-top: 5px;
 }
 
@@ -132,18 +171,17 @@ nav > .container::after {
     color: white;
 }
 
-.button#login i {
-    font-size: 18px;
-}
-
 .button#login:hover {
     background-color: white;
     color: #012879;
 }
+
+.button#login i {
+    font-size: 18px;
+}
 /* --- Fine nav --- */
 
 /* --- Inizio jumbotron --- */
-
 #jumbotron {
     padding: 60px 0 100px 0;
 }
@@ -154,32 +192,32 @@ nav > .container::after {
 
 #jumbotron-content > span {
     font-size: 13px;
-    text-transform: uppercase;
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 #jumbotron-content > h1 {
+    margin: 20px 0;
     font-family: 'Poppins', sans-serif;
     font-size: 50px;
     font-weight: 500;
-    margin: 20px 0;
 }
 
 #jumbotron-content > p {
+    margin-bottom: 25px;
     font-size: 18px;
     font-weight: 400;
-    margin-bottom: 25px;
 }
 
-#jumbotron-content > .button {
+#jumbotron-content > a.button {
     margin: 0;
 }
 /* --- Fine jumbotron --- */
 
 /* --- Inizio main --- */
 main {
-    padding: 100px 0 80px 0;
     position: relative;
+    padding: 100px 0 80px 0;
 }
 
 main img.wire {
@@ -202,25 +240,17 @@ main .container:first-of-type {
 #main-top::after {
     content: "";
     display: table;
-    clear: both
+    clear: both;
 }
 
 main h2 {
     color: rgba(0, 0, 0, 0.6);
 }
 
-main h2, #mobile h2, #call-to-action h2 {
-    margin-bottom: 50px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-    line-height: 48px;
-}
-
 #main-image > img {
+    display: block;
     width: 100%;
     padding: 90px 0;
-    display: block;
 }
 
 #main-text > h2 > span {
@@ -237,48 +267,32 @@ main h2, #mobile h2, #call-to-action h2 {
     margin: 0;
 }
 
-main h3, #security h3 {
-    color: #001A4F;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 27px;
-    margin-bottom: 20px;
-}
-
 main p, #security p {
     color: #727272;
 }
 
-main p, #mobile p, #security p, #call-to-action p {
-    padding-bottom: 20px;
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 27px;
-}
-
-#main-footer {
+#main-bottom {
     margin-top: 120px;
     text-align: center;
 }
 
-#main-footer > .box {
+#main-bottom > .box {
     float: left;
-    width: calc((100% / 3) - (120px / 3));
+    width: calc((100% - 120px) / 3);
     margin-right: 60px;
 }
 
-#main-footer::after {
+#main-bottom::after {
     content: "";
-    display: table;;
+    display: table;
     clear: both;
 }
 
-#main-footer > .box:last-child {
+#main-bottom > .box:last-child {
     margin: 0;
 }
 
-#main-footer .box img {
+#main-bottom .box img {
     margin-bottom: 20px;
 }
 /* --- Fine main --- */
@@ -334,10 +348,10 @@ main p, #mobile p, #security p, #call-to-action p {
 }
 
 #mobile a {
-    color: #64DE82;
-    font-weight: 700;
     font-family: 'Maven Pro', sans-serif;
     font-size: 18px;
+    font-weight: 700;
+    color: #64DE82;
 }
 
 #mobile a:hover {
@@ -345,8 +359,8 @@ main p, #mobile p, #security p, #call-to-action p {
 }
 
 #mobile-image img {
-    width: 60%;
     display: block;
+    width: 60%;
     margin: auto;
 }
 /* --- Fine sezione mobile --- */
@@ -361,7 +375,7 @@ main p, #mobile p, #security p, #call-to-action p {
     width: 50%;
 }
 
-#security .container {
+#security .container::after {
     content: "";
     display: table;
     clear: both;
@@ -374,9 +388,9 @@ main p, #mobile p, #security p, #call-to-action p {
 
 /* --- Inizio sezione call-to-action --- */
 #call-to-action {
+    padding: 55px 0;
     color: white;
     background-color: #294681;
-    padding: 55px 0;
 }
 
 #call-to-action .title, #call-to-action .content {
@@ -398,12 +412,12 @@ main p, #mobile p, #security p, #call-to-action p {
 /* --- Inizio footer --- */
 footer {
     padding: 55px 0;
-    background-color: #001A4F;
     font-family: 'Maven Pro', sans-serif;
     font-weight: 400;
     font-size: 15px;
-    color: white;
     line-height: 22px;
+    background-color: #001A4F;
+    color: white;
 }
 
 footer #contacts, footer #links {
@@ -416,12 +430,12 @@ footer .container::after {
     clear: both;
 }
 
-footer  #contacts {
+footer #contacts {
     width: 18%;
     padding-right: 65px;
 }
 
-footer  #links {
+footer #links {
     width: 82%;
 }
 
@@ -434,10 +448,16 @@ footer #contacts .logo a:hover {
     opacity: 0.7;
 }
 
+footer #contacts p {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+}
+
 footer #contacts a#email {
-    color: white;
     display: block;
     margin: 20px 0;
+    color: white;
 }
 
 footer #contacts a#email:hover {
@@ -464,8 +484,8 @@ footer .menu {
 
 footer .menu .item {
     float: left;
-    margin-right: 25px;
     width: calc((100% - 125px) / 6);
+    margin-right: 25px;
 }
 
 footer .menu .item:last-child {
@@ -478,13 +498,24 @@ footer .menu::after {
     clear: both;
 }
 
+footer .menu h5 {
+    margin-bottom: 20px;
+    font-family: 'Maven Pro', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+footer .menu h5:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
 footer .menu ul {
     list-style-type: none;
 }
 
 footer .menu ul li {
-    line-height: 22px;
     margin: 10px 0;
+    line-height: 22px;
 }
 
 footer .menu a {
@@ -493,14 +524,6 @@ footer .menu a {
 
 footer .menu a:hover {
     color: #64DE82;
-}
-
-footer .menu h5 {
-    margin-bottom: 20px;
-}
-
-footer .menu h5:hover {
-    color: rgba(255, 255, 255, 0.8);
 }
 
 footer .info li {
@@ -514,11 +537,5 @@ footer .info a {
 
 footer .info a:hover {
     color: #64DE82;
-}
-
-footer .menu h5 {
-    font-family: 'Maven Pro', sans-serif;
-    font-weight: 400;
-    font-size: 15px;
 }
 /* --- Fine footer --- */
